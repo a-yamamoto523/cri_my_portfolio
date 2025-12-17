@@ -80,7 +80,8 @@ p{
 #header {
   width: 100%;
   height: 100px;
-  color: #A16803;
+  /* color: #A16803; */
+  color: #0328a1; 
   display: flex;
   align-items: center;
   padding: 0px 50px;

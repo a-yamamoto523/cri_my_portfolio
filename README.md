@@ -6,8 +6,8 @@ BEM（Block, Element, Modifier）の概念をベースに、FLOCSSのレイヤ�
 ### BEMの基本構造
 クラス名は Block__Element--Modifier の形式で記述します。
 
-・Block (block): スタンドアロンで成立する構成単位（例：c-button, p-card）。  
-・Element (__element): Blockを構成する依存要素。アンダースコア2つで繋ぎます（例：__title, __item）。  
+・Block (block): スタンドアロンで成立する構成単位（例：c-button, p-card）。
+・Element (__element): Blockを構成する依存要素。アンダースコア2つで繋ぎます（例：__title, __item）。
 ・Modifier (--modifier): BlockやElementの「状態」や「変化」を表します。ハイフン2つで繋ぎます（例：--large, --active）。  
 
 ---

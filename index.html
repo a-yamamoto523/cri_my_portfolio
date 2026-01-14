@@ -1,94 +1,51 @@
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Zen+Kaku+Gothic+New:wght@300..900&display=swap" rel="stylesheet">
-    <title>Akiのポートフォリオサイト</title>
-</head>
-<body id="body">
-  <header id="l-header">
-    <!-- ロゴ -->
-    <div class="p-headerLogo">
-      <img src="img/aki-logo.png" alt="ヘッダーロゴ">
+<header id="l-header" class="l-header">
+  <div class="p-header-logo">
+    <img src="img/aki-logo.png" alt="ヘッダーロゴ" class="p-header-logo__img">
+  </div>
+
+  <nav class="p-global-nav">
+    <ul class="p-global-nav__list">
+      <li class="p-global-nav__item">
+        <a href="index.html" class="p-global-nav__link">HOME</a>
+      </li>
+      <li class="p-global-nav__item">
+        <a href="work.html" class="p-global-nav__link">Work</a>
+      </li>
+      <li class="p-global-nav__item">
+        <a href="plofile.html" class="p-global-nav__link">Plofile</a>
+      </li>
+      <li class="p-global-nav__item">
+        <a href="#" class="p-global-nav__link">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main id="l-main">
+  <section class="p-key-visual">     
+    <div class="p-key-visual__img-wrapper">
+      <img src="img/aki_KV.png" alt="YAMAMOTO AKI ポートフォリオサイト" class="p-key-visual__img">
     </div>
+  </section>
 
-    <!-- ナビ -->
-    <nav class="p-headerNavi">
-      <ul class="p-navigationBox">
-        <li class="p-navigationItem">
-          <a href="index.html">HOME</a>
-        </li>
-        <li class="p-navigationItem">
-          <a href="work.html">Work</a>
-        </li>
-        <li class="p-navigationItem">
-          <a href="plofile.html">Plofile</a>
-        </li>
-        <li class="p-navigationItem">
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-    </nav>
-
+  <section class="p-work-loop">
+    <div class="p-work-loop__modal">
+      <img src="img/Frame 24.jpg" alt="Dammy" class="p-work-loop__img">
+    </div>
     
-  </header>
+    <a href="work.html" class="c-button">
+      <span class="c-button__text">VIEW WORK</span>
+    </a>
+  </section>
+</main>  
 
-   
-      <!-- メイン要素を意味するタグ -->
-  <main id="l-main">
-    <section class="p-keyVisual">     
-      <div class="p-headerLogo">
-          <img src="img/aki_KV.png" alt="YAMAMOTO AKI ポートフォリオサイト">
-      </div>
-    </section>
-
-    <!-- モーダルループ入ります -->
-    <section class="p-loop">
-      <div class="p-Modal">
-        <img src="img/Frame 24.jpg" alt="Dammy">
-      </div>
-      
-      
-      <a href="work.html">
-        <div class="c-workButton"></div>
-      </a>
-    
-    </section>
-
-    
-  </main>  
-  
-  
-
-
-
-
-  <footer id="l-footer">
-    <!-- ナビ -->
-    <nav class="p-footerNavi">
-      <ul class="p-navigationBox">
-        <li class="p-navigationItem">
-          <a href="index.html">HOME</a>
-        </li>
-        <li class="p-navigationItem">
-          <a href="work.html">Work</a>
-        </li>
-        <li class="p-navigationItem">
-          <a href="plofile.html">Plofile</a>
-        </li>
-        <li class="p-navigationItem">
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-    </nav>
-
-  </footer>
-
-  <script src="js/script.js">
-
-  </script> 
-</body>
-</html>
+<footer id="l-footer" class="l-footer">
+  <nav class="p-footer-nav">
+    <ul class="p-footer-nav__list">
+      <li class="p-footer-nav__item"><a href="index.html">HOME</a></li>
+      <li class="p-footer-nav__item"><a href="work.html">Work</a></li>
+      <li class="p-footer-nav__item"><a href="plofile.html">Plofile</a></li>
+      <li class="p-footer-nav__item"><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</footer>

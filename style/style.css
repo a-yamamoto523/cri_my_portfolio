@@ -1,475 +1,105 @@
-@charset "UTF-8";
-
-
-
-
-/* 
-以下のCSSは「リセットCSS」といいます。
-各ブラウザには最初から一部CSSの値が設定されており、それをリセットして見栄えを統一するために使われます。
-*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
-  font-family: "Zen Kaku Gothic New", "Manrope", sans-serif;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  padding-bottom: 30px;
-  font-weight: 500;
-  background-color:#F0EDE4 ;
-  font-size: 14px;
-  color: #503C14;
-  letter-spacing: 0.05em;
-
-}
-
-body.active{
-  overflow: hidden;
-}
-
-
-img,
-picture,
-video,
-canvas,
-svg {
-  max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer; 
-
-}
-
-
-
-ul,
-ol,
-li {
-  list-style: none;
-  color: #503C14;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-/* リセットCSS おわり */
-p{
-  color: #503C14;
-}
-
-
-#header {
+/* ==========================================
+   Layout（大きな枠組み）
+   ========================================== */
+.l-header {
   width: 100%;
   height: 100px;
-  /* color: #A16803; */
   color: #0328a1; 
   display: flex;
   align-items: center;
-  padding: 0px 50px;
-  top: 0px;
-  z-index: 1; /* ヘッダーを前面に表示 */
+  padding: 0 50px;
+  position: sticky; /* top:0と一緒に使うと固定に便利 */
+  top: 0;
+  z-index: 10;
   border-bottom: 1px solid #A16803;
-
+  background-color: #F0EDE4; /* 背景色を指定 */
 }
 
-#main {
+.l-main {
   width: 100%;
-  
 }
 
-.headerLogo {
+.l-footer {
+  border-top: 1px solid #A16803;
+  border-bottom: 1px solid #A16803;
+}
+
+/* ==========================================
+   Project（特定のパーツ・ページ要素）
+   ========================================== */
+
+/* ヘッダーロゴ */
+.p-header-logo {
   width: 135px;
 }
 
-.headerNavi{
-margin: 0 0 0 auto;
+/* ナビゲーション共通（BEMの基本形） */
+.p-global-nav {
+  margin-left: auto;
 }
-
-.navigationBox{
-  display: flex;
-  gap:48px;
-  
-}
-
-.navigationItem{
-  color: #A16803;
-  font-size: 18px;
-
-}
-
-.navigationItem:hover{
-  color: #503C14;
-  font-weight: 600;
-  text-decoration:underline;
-  
-}
-
-.keyVisualLogo{
-text-align: right;
-margin-top: 70px;
-
-}
-
-
-.keyVisualLogo img{
-  width: 80%;
-
-}
-
-.loop{
-  margin-top: 70px;
-}
-
-
-.workButton {
-  margin:  100px auto;
-  width: 280px;
-  height: 51px;
-  background:url(../img/workButton-01.png);
-  background-size:cover;
-
-}
-
-.workButton:hover {
-  margin:  100px auto;
-  width: 280px;
-  height: 51px;
-  background:url(../img/workButton-02.png);
-  background-size:cover;
-
-}
-
-
-
-
-#footer{
-  border-top: 1px solid #A16803;
-  border-bottom: 1px solid #A16803;
-
-}
-
-
-.footerNavi .navigationBox{
+.p-global-nav__list {
   display: flex;
   gap: 48px;
-  justify-content: center;
-  padding: 30px 0;
-
 }
-
-h1{
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-
-
-}
-
-h1 p{
-  font-size: 100px;
-  font-family: "Manrope";
-  color: #d1bc98;
-  line-height: 0.8em;
-  margin-top: 80px;
-  margin-left: 80px;
- 
-}
-
-.title-01{
-  border-bottom: 5px solid #A16803;
-  position: relative;
-  width: 80%;
-
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    border-bottom: 1px solid #A16803;
-    width: 100%;
-  }
-}
-
-
-.profile{
-  display: flex;
-  justify-content: space-between;
-  width:1100px;
-  margin: 70px auto;
-
-  
-}
-
-.profileImage{
-  width: 374px;
-  height: 481px;
-
-}
-
-
-.profileText{
-  width: 650px;
-}
-
-.ruby{
-  color: #d1bc98;
-  font-size: 13px;
-  line-height: 1em;
-  
-}
-
-.name{
-  font-size: 23px;
-  font-weight: 700;
-  line-height: 1em;
-  margin-top: 5px;
-}
-
-h3{
-  padding: 0px 8px;/*上下 左右の余白*/
-  color: #503C14;/*文字色*/
-  background: transparent;/*背景透明に*/
-  border-left: solid 3px #503C14;/*左線*/
-  font-size: 16px;
-  line-height: 1em;
-  margin-top: 30px;
-  
-}
-
-.profileTextBlock ul{
-  margin-top: 10px;
-}
-
-.profileTextBlock p{
-  margin-top: 10px;
-}
-
-
-
-.profileList02{
-  display: flex;
-}
-
-.profileList02 li{
-  display: flex;
-  padding-right: 10px;
-}
-
-.profileTimeline{
-   font-weight: 700;
-
-}
-
-hr{
-  margin-top: 30px;
-}
-
-/* Work ページ */
-#workTitle{
-  margin-top: 10px;
-  background-color: #FBFAF6;
-  
-}
-
-.page_top_btn{
-position: fixed;
-bottom: 10px;
-right: 10px;
-padding: 0.7em;
-text-align: center;
-color: #fff;
-transition: 0.3s0;
-}
-
-
-
-.workNavigation{
-  display: flex;
-  gap:20px;
-  
-  
-}
-
-.workNavigationItem{
+.p-global-nav__item {
+  font-size: 18px;
   color: #A16803;
-  font-size: 16px;
-
 }
-
-.workNavigationItem:hover{
+.p-global-nav__link {
+  transition: color 0.3s, font-weight 0.3s;
+}
+.p-global-nav__link:hover {
   color: #503C14;
   font-weight: 600;
-  text-decoration:underline;
-  
+  text-decoration: underline;
 }
 
-
-
-
-h2{
-  position: relative;
-  display: inline-block;
-  padding: 0 210px;
-  color: #A16803;
-  font-size: 30px;
-  vertical-align: middle;
-  margin-top: 110px;
+/* キービジュアル */
+.p-key-visual {
+  text-align: right;
+  margin-top: 70px;
+}
+.p-key-visual__img {
+  width: 80%;
 }
 
-h2.title-02A::before {
-  left: 0;
-  margin-top: -5px;
- 
-}
-
-h2.title-02A::before {
-  position: absolute;
-  top: 50%;
-  content: '';
-  display: inline-block;
-  width: 200px;
-  height: 10px;
-  background: repeating-linear-gradient(90deg, #A16803,#A16803 5px, #FBFAF6 1px, #FBFAF6 10px)
-
-}
-
-h2.title-02B::before {
-  left: 0;
-  margin-top: -5px;
-}
-
-
-h2.title-02B::before {
-  position: absolute;
-  top: 50%;
-  content: '';
-  display: inline-block;
-  width: 200px;
-  height: 10px;
-  background: repeating-linear-gradient(90deg, #A16803,#A16803 5px, #F0EDE4 1px, #F0EDE4 10px)
-
-}
-
-
-
-#workSection01{
-  background-color: #FBFAF6;
-  padding-bottom: 150px;
-}
-
-#workSection03{
-  background-color: #FBFAF6;
-  padding-bottom: 150px;
-}
-
-
-
-.workBlock01{
+/* プロフィールセクション */
+.p-profile {
   display: flex;
   justify-content: space-between;
-  width:1100px;
+  width: 1100px;
   margin: 70px auto;
-
-  
 }
-
-.workBlock02{
-  display: flex;
-  justify-content: space-between;
-  width:1100px;
-  margin: 70px auto;
-
-  
+.p-profile__image {
+  width: 374px;
+  height: 481px;
 }
-
-.workImage{
-  margin-top: 30px;
+.p-profile__text-content {
   width: 650px;
-
-
 }
 
+/* ==========================================
+   Component（使い回すボタンなど）
+   ========================================== */
 
-.workText{
-  width: 350px;
-  
+/* Workへ飛ぶボタン */
+.c-button-work {
+  display: block;
+  margin: 100px auto;
+  width: 280px;
+  height: 51px;
+  background: url(../img/workButton-01.png) no-repeat center/cover;
+  transition: 0.3s;
+}
+.c-button-work:hover {
+  background-image: url(../img/workButton-02.png);
 }
 
-
-.workTextBox ul{
-  margin-top: 10px;
-}
-
-.workTextBox p{
-  margin-top: 10px;
-}
-
-
-
-.workeList02{
-  display: flex;
-}
-
-.workList02 li{
-  display: flex;
-  padding-right: 10px;
-}
-
-.workTimeline{
-   font-weight: 700;
-
-}
-
-
-.pageButton {
+/* 汎用ページボタン */
+.c-button-page {
+  display: inline-block;
   margin-top: 30px;
   width: 160px;
   height: 45px;
-  background:url(../img/pageButton-01.png);
-  background-size:cover;
-
+  background: url(../img/pageButton-01.png) no-repeat center/cover;
 }
-
-.pageButton:hover {
-  margin-top: 30px;
-  width: 160px;
-  height: 45px;
-  background:url(../img/pageButton-02.png);
-  background-size:cover;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

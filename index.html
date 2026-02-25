@@ -1,28 +1,41 @@
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<!-- ＊ポイント＊
+何をブロックとして捉えるかを考える
+ブロック__エレメント
+１つのクラス内でエレメントは２つ以上使わない
+ハイフンを使わずキャメルケースで命名 -->
+
 <header id="l-header" class="l-header">
-  <div class="p-header-logo">
-    <img src="img/aki-logo.png" alt="ヘッダーロゴ" class="p-header-logo__img">
+  <div class="p-header__logo">
+    <img src="img/aki-logo.png" alt="ヘッダーロゴ" class="p-header__img">
   </div>
 
-  <nav class="p-global-nav">
-    <ul class="p-global-nav__list">
-      <li class="p-global-nav__item">
-        <a href="index.html" class="p-global-nav__link">HOME</a>
+  <nav class="p-header__nav">
+    <ul class="p-header__list">
+      <li class="p-header__item">
+        <a href="index.html" class="p-header__link">HOME</a>
       </li>
-      <li class="p-global-nav__item">
-        <a href="work.html" class="p-global-nav__link">Work</a>
+      <li class="p-header__item">
+        <a href="work.html" class="p-header__link">Work</a>
       </li>
-      <li class="p-global-nav__item">
-        <a href="plofile.html" class="p-global-nav__link">Plofile</a>
+      <li class="p-header__item">
+        <a href="plofile.html" class="p-header__link">Plofile</a>
       </li>
-      <li class="p-global-nav__item">
-        <a href="#" class="p-global-nav__link">Contact</a>
+      <li class="p-header__item">
+        <a href="#" class="p-header__link">Contact</a>
       </li>
     </ul>
   </nav>
 </header>
 
 <main id="l-main">
-  <section class="p-key-visual">     
+  <section class="p-key-visual">
     <div class="p-key-visual__img-wrapper">
       <img src="img/aki_KV.png" alt="YAMAMOTO AKI ポートフォリオサイト" class="p-key-visual__img">
     </div>
@@ -32,13 +45,12 @@
     <div class="p-work-loop__modal">
       <img src="img/Frame 24.jpg" alt="Dammy" class="p-work-loop__img">
     </div>
-    
+
     <a href="work.html" class="c-button">
       <span class="c-button__text">VIEW WORK</span>
     </a>
   </section>
-</main>  
-
+</main>
 <footer id="l-footer" class="l-footer">
   <nav class="p-footer-nav">
     <ul class="p-footer-nav__list">
@@ -49,3 +61,7 @@
     </ul>
   </nav>
 </footer>
+</body>
+</html>
+
+

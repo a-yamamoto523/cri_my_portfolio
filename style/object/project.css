@@ -4,4 +4,26 @@
 役割: 基本こればっか使います。特定のページやセクションに固有の単位を意味します、
 命名: クラス名頭に「p-」を付ける。 
 例: .p-top-area, .p-top-area__title, .p-about-section, .p-about-section__heading, .p-contact-form
-*//*# sourceMappingURL=project.css.map */
+*/
+.p-header__logo {
+  /* ロゴのスタイル */
+}
+
+.p-header__item__link {
+  /* ナビゲーションリンクのスタイル */
+}
+
+.p-imgWrapper {
+  /* 画像のスタイル */
+}
+.p-imgWrapper__img {
+  /* 画像のスタイル */
+}
+
+.p-modal__img {
+  /* モーダル内の画像のスタイル */
+}
+
+.navList__item {
+  /* ナビゲーションリストアイテムのスタイル */
+}/*# sourceMappingURL=project.css.map */

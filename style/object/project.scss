@@ -6,19 +6,57 @@
 */
 
 // 実用例
-.p-top {
+.p-header {
 
-    .p-title {
-        // 適宜スタイル
-
-        &__image {
-            // 適宜スタイル
-
-        }
-
-        &__text {
-            // 適宜スタイル
-
-        }
+    &__logo {
+        /* ロゴのスタイル */
     }
 }
+
+.p-header__nav{}
+
+.p-header__list{}
+
+.p-header__item{
+    &__link {
+        /* ナビゲーションリンクのスタイル */
+    }
+}
+
+.p-visual {
+   
+}
+
+.p-imgWrapper {
+    /* 画像のスタイル */
+    &__img {
+        /* 画像のスタイル */
+    }
+}
+
+.workLoop {
+    
+}
+
+.p-modal{
+    &__img {
+        /* モーダル内の画像のスタイル */
+    }
+}
+
+.footerNav{
+
+}
+
+.navList{
+    &__item {
+        /* ナビゲーションリストアイテムのスタイル */
+    }
+}
+
+
+
+
+
+
+

@@ -9,33 +9,48 @@
 .p-header {
 
     &__logo {
-        /* ロゴのスタイル */
+         width: 135px;
     }
 }
 
-.p-header__nav{}
+.p-header__nav{
+    margin: 0 0 0 auto;
+}
 
-.p-header__list{}
+.p-header__list{
+    display: flex;
+    gap:48px;
+}
 
 .p-header__item{
+    color: #A16803;
+    font-size: 18px;
     &__link {
         /* ナビゲーションリンクのスタイル */
     }
+    &:hover{
+    color: #503C14;
+    font-weight: 600;
+    text-decoration:underline;
+  
+}
 }
 
 .p-visual {
+    text-align: right;
+    margin-top: 70px;
    
 }
 
 .p-imgWrapper {
     /* 画像のスタイル */
-    &__img {
+    &__img {width: 80%;
         /* 画像のスタイル */
     }
 }
 
 .workLoop {
-    
+    margin-top: 70px;
 }
 
 .p-modal{
@@ -45,10 +60,17 @@
 }
 
 .footerNav{
+    border-top: 1px solid #A16803;
+  border-bottom: 1px solid #A16803;
 
 }
 
 .navList{
+    display: flex;
+  gap: 48px;
+  justify-content: center;
+  padding: 30px 0;
+
     &__item {
         /* ナビゲーションリストアイテムのスタイル */
     }

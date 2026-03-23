@@ -56,11 +56,11 @@ table {
 命名: クラス名頭に「l-」を付ける。 
 例: .l-header, .l-footer, .l-main, .l-sidebar
 */
-#l-header {
+.l-header {
   /* ヘッダーのスタイル */
 }
 
-#l-main {
+.l-main {
   /* メインコンテンツエリアのスタイル */
 }
 
@@ -77,24 +77,63 @@ table {
 例: .p-top-area, .p-top-area__title, .p-about-section, .p-about-section__heading, .p-contact-form
 */
 .p-header__logo {
-  /* ロゴのスタイル */
+  width: 135px;
 }
 
+.p-header__nav {
+  margin: 0 0 0 auto;
+}
+
+.p-header__list {
+  display: flex;
+  gap: 48px;
+}
+
+.p-header__item {
+  color: #A16803;
+  font-size: 18px;
+}
 .p-header__item__link {
   /* ナビゲーションリンクのスタイル */
+}
+.p-header__item:hover {
+  color: #503C14;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.p-visual {
+  text-align: right;
+  margin-top: 70px;
 }
 
 .p-imgWrapper {
   /* 画像のスタイル */
 }
 .p-imgWrapper__img {
+  width: 80%;
   /* 画像のスタイル */
+}
+
+.workLoop {
+  margin-top: 70px;
 }
 
 .p-modal__img {
   /* モーダル内の画像のスタイル */
 }
 
+.footerNav {
+  border-top: 1px solid #A16803;
+  border-bottom: 1px solid #A16803;
+}
+
+.navList {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  padding: 30px 0;
+}
 .navList__item {
   /* ナビゲーションリストアイテムのスタイル */
 }

@@ -5,25 +5,74 @@
 命名: クラス名頭に「p-」を付ける。 
 例: .p-top-area, .p-top-area__title, .p-about-section, .p-about-section__heading, .p-contact-form
 */
+.p-header {
+  width: 100%;
+  height: 100px;
+  color: #A16803;
+  display: flex;
+  align-items: center;
+  padding: 0px 50px;
+  top: 0px;
+  z-index: 1; /* ヘッダーを前面に表示 */
+  border-bottom: 1px solid #A16803;
+}
 .p-header__logo {
-  /* ロゴのスタイル */
+  width: 135px;
+}
+.p-header__nav {
+  margin: 0 0 0 auto;
+  display: flex;
+  gap: 48px;
+}
+.p-header__list {
+  display: flex;
+  gap: 48px;
+}
+.p-header__item {
+  color: #A16803;
+  font-size: 18px;
+}
+.p-header__item:hover {
+  color: #503C14;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.p-header__link {
+  /* ナビゲーションリンクのスタイル */
 }
 
-.p-header__item__link {
-  /* ナビゲーションリンクのスタイル */
+.p-visual {
+  text-align: right;
+  margin-top: 70px;
 }
 
 .p-imgWrapper {
   /* 画像のスタイル */
 }
 .p-imgWrapper__img {
+  width: 80%;
   /* 画像のスタイル */
+}
+
+.workLoop {
+  margin-top: 70px;
 }
 
 .p-modal__img {
   /* モーダル内の画像のスタイル */
 }
 
+.footerNav {
+  border-top: 1px solid #A16803;
+  border-bottom: 1px solid #A16803;
+}
+
+.navList {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  padding: 30px 0;
+}
 .navList__item {
   /* ナビゲーションリストアイテムのスタイル */
 }/*# sourceMappingURL=project.css.map */

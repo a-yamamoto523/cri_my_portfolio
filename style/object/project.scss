@@ -55,43 +55,99 @@
 
 
 .p-visual {
-    text-align: right;
-    margin-top: 70px;
-   
+  
+
 }
 
 .p-imgWrapper {
     /* 画像のスタイル */
-    &__img {width: 80%;
+    &__img {
         /* 画像のスタイル */
+        width: 80%;
+        margin: 70px 0 70px auto;
+
     }
 }
 
-.workLoop {
-    margin-top: 70px;
+.p-workLoop {
+    
 }
 
 .p-modal{
+  display: none; 
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+
     &__img {
         /* モーダル内の画像のスタイル */
+            margin: 70px 0;
+
     }
 }
 
-.footerNav{
+.p-modalContent {
+  position: relative;
+  max-width: 80%;
+  width: 100%;
+  height: auto;
+
+  &__close {
+  position: absolute;
+  top: -30px; right: 0;
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+
+}
+
+.p-slider{
+  display: flex;
+  overflow-x: auto;          /* 横スクロールを許可 */
+  scroll-snap-type: x mandatory; /* 横方向に強制的にスナップさせる */   
+  width: 100%;
+  height: 292px;
+
+  &__item {
+    flex: 0 0 20%;
+    scroll-snap-align: start;  /* スクロールが止まる位置を先頭に合わせる */
+    width: 242px;
+    height: 292px;
+    object-fit: cover;
+    margin-right: 50px;
+    }
+}
+
+
+.p-footer{
+   
+}
+
+.p-footerNav{
     border-top: 1px solid #A16803;
-  border-bottom: 1px solid #A16803;
+    border-bottom: 1px solid #A16803;
 
 }
 
-.navList{
+.p-navList{
     display: flex;
-  gap: 48px;
-  justify-content: center;
-  padding: 30px 0;
+    gap: 48px;
+    justify-content: center;
+    padding: 30px 0;
 
-    &__item {
-        /* ナビゲーションリストアイテムのスタイル */
-    }
+    &__item{
+        color: #A16803;
+        font-size: 18px;}
+
+
+    &__item:hover{
+        color: #503C14;
+        font-weight: 600;
+        text-decoration:underline;}
 }
 
 

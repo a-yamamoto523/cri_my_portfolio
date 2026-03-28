@@ -6,6 +6,7 @@
   <title>Document</title>
 </head>
 <body>
+<!-- ★：不要なコメントは削除しましょう。 -->
 <!-- ＊ポイント＊
 何をブロックとして捉えるかを考える
 ブロック__エレメント
@@ -13,6 +14,7 @@
 ハイフンを使わずキャメルケースで命名 -->
 
 <header id="l-header" class="l-header p-header">
+  <!-- ★：トップページならロゴをh1にするのはSEO的に大正解です。 -->
   <div class="p-header__logo">
     <img src="img/aki-logo.png" alt="ヘッダーロゴ" class="p-header__img">
   </div>
@@ -26,6 +28,7 @@
         <a href="work.html" class="p-header__link">Work</a>
       </li>
       <li class="p-header__item">
+        <!-- ★：タイポ修正！「plofile」→「profile」。全ファイル・フォルダ名も併せて確認してください。 -->
         <a href="plofile.html" class="p-header__link">Plofile</a>
       </li>
       <li class="p-header__item">
@@ -37,11 +40,13 @@
 
 <main id="l-main">
   <section class="p-visual">
+    <!-- ★：セクションには必ず見出し（h2〜）が必要です。デザイン上不要ならCSSで隠しましょう。 -->
     <div class="p-imgWrapper">
       <img src="img/aki_KV.png" alt="YAMAMOTO AKI ポートフォリオサイト" class="p-imgWrapper__img">
     </div>
   </section>
 
+  <!-- ★：不要なコメントは削除しましょう。 -->
   <!-- 
   <section class="p-workLoop">
     <div class="p-modal">
@@ -49,8 +54,9 @@
     </div>
   </section>-->
 
-
+  <!-- ★：スライダーも一つのセクションなので、h2などの見出しを推奨します。 -->
   <section class="p-slider">
+   <!-- ★：alt="Photo 1" はNGです。具体的に「カフェのロゴ」など内容を書きましょう。 -->
    <div class="p-slider__item"><a href="#modal01"><img src="img/Group 16.png" alt="Photo 1"></a></div>
    <div class="p-slider__item"><a href="#modal01"><img src="img/Group 17.png" alt="Photo 2"></a></div>
    <div class="p-slider__item"><a href="#modal01"><img src="img/Group 18.png" alt="Photo 3"></a></div>
@@ -64,22 +70,23 @@
    <div class="p-slider__item"><a href="#modal01"><img src="img/Group 21.png" alt="Photo 5"></a></div>
    <div class="p-slider__item"><a href="#modal01"><img src="img/Group 50.png" alt="Photo 6"></a></div>
 
+   <!-- ★：モーダルはスライダーの「外（直下）」に置くと、CSSの重なり順トラブルを防ぎやすいです。 -->
    <div id="modal01" class="p-modal">
      <div class="p-modalContent">
       <img src="img/Group 52.png" alt="Full Photo 1">
+      <!-- ★：×ボタンには aria-label="閉じる" を付けると、読み上げソフト利用者に親切です。 -->
       <a href="#" class="p-modalContent__close">&times;</a>
      </div>
    </div>
-
 
   </section>
 
     <a href="work.html" class="c-button">
       <span class="c-button__text"></span>
     </a>
+  <!-- ★：</section> が余分かも？ -->
   </section>
 </main>
-
 
 <footer id="l-footer" class="l-footer p-footer">
   <nav class="p-footerNav">
@@ -90,6 +97,8 @@
       <li class="p-navList__item"><a href="#">Contact</a></li>
     </ul>
   </nav>
+  <!-- ★：コピーライトを追加すると、サイトとしての完成度と信頼性が一気に上がります。 -->
+  <!-- （例）<p class="p-copyright"><small>&copy; 2026 AKI YAMAMOTO</small></p> -->
 </footer>
 </body>
 </html>

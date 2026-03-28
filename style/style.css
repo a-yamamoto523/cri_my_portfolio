@@ -57,14 +57,6 @@ table {
 命名: クラス名頭に「l-」を付ける。 
 例: .l-header, .l-footer, .l-main, .l-sidebar
 */
-.l-header {
-  /* ヘッダーのスタイル */
-}
-
-.l-main {
-  /* メインコンテンツエリアのスタイル */
-}
-
 /* 
 【Component】
 役割: 再利用可能な最小単位の部品（ボタン、カード、フォーム部品など）。FLOCSSとBEMを組み合わせる際に、最もBEM命名規則が活用される層です。
@@ -102,13 +94,13 @@ table {
 .p-header {
   width: 100%;
   height: 100px;
-  color: #A16803;
+  color: #a16803;
   display: flex;
   align-items: center;
   padding: 0px 50px;
   top: 0px;
   z-index: 1; /* ヘッダーを前面に表示 */
-  border-bottom: 1px solid #A16803;
+  border-bottom: 1px solid #a16803;
 }
 .p-header__logo {
   width: 135px;
@@ -123,16 +115,15 @@ table {
   gap: 48px;
 }
 .p-header__item {
-  color: #A16803;
+  color: #a16803;
   font-size: 18px;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 .p-header__item:hover {
-  color: #503C14;
-  font-weight: 600;
+  color: #503c14;
   text-decoration: underline;
-}
-.p-header__link {
-  /* ナビゲーションリンクのスタイル */
+  transform: scale(1.2);
 }
 
 .p-imgWrapper {
@@ -199,8 +190,8 @@ table {
 }
 
 .p-footerNav {
-  border-top: 1px solid #A16803;
-  border-bottom: 1px solid #A16803;
+  border-top: 1px solid #a16803;
+  border-bottom: 1px solid #a16803;
 }
 
 .p-navList {
@@ -210,11 +201,11 @@ table {
   padding: 30px 0;
 }
 .p-navList__item {
-  color: #A16803;
+  color: #a16803;
   font-size: 18px;
 }
 .p-navList__item:hover {
-  color: #503C14;
+  color: #503c14;
   font-weight: 600;
   text-decoration: underline;
 }

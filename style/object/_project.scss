@@ -1,0 +1,140 @@
+/* 
+【Project】
+役割: 基本こればっか使います。特定のページやセクションに固有の単位を意味します、
+命名: クラス名頭に「p-」を付ける。 
+例: .p-top-area, .p-top-area__title, .p-about-section, .p-about-section__heading, .p-contact-form
+*/
+
+.p-header {
+  width: 100%;
+  height: 100px;
+  color: #a16803;
+  display: flex;
+  align-items: center;
+  padding: 0px 50px;
+  top: 0px;
+  z-index: 1; /* ヘッダーを前面に表示 */
+  border-bottom: 1px solid #a16803;
+
+  &__logo {
+    width: 135px;
+  }
+
+  &__nav {
+    margin: 0 0 0 auto;
+    display: flex;
+    gap: 48px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 48px;
+  }
+
+  &__item {
+    color: #a16803;
+    font-size: 18px;
+    text-decoration: none;
+    transition: // ★：transitionの設定（transformを追加）
+      transform 0.3s ease,
+      color 0.3s ease;
+  }
+
+  &__item:hover {
+    color: #503c14;
+    text-decoration: underline;
+    transform: scale(1.2); // ★：1.3倍にズーム
+  }
+}
+
+.p-imgWrapper {
+  /* 画像のスタイル */
+  &__img {
+    /* 画像のスタイル */
+    width: 80%;
+    margin: 70px 0 70px auto;
+  }
+}
+
+.p-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* これがないと、上下の中央が計算できません */
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+
+  &__img {
+    /* モーダル内の画像のスタイル */
+    margin: 70px 0;
+  }
+
+  &:target {
+    display: flex; /* 1. Flexboxを有効にする */
+    justify-content: center; /* 2. 横方向の真ん中 */
+    align-items: center; /* 3. 縦方向の真ん中 */
+  }
+}
+
+.p-modalContent {
+  position: relative;
+  max-width: 80%;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+
+  &__close {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+  }
+}
+
+.p-slider {
+  display: flex;
+  overflow-x: auto; /* 横スクロールを許可 */
+  scroll-snap-type: x mandatory; /* 横方向に強制的にスナップさせる */
+  width: 100%;
+  height: 292px;
+
+  &__item {
+    flex: 0 0 20%;
+    scroll-snap-align: start; /* スクロールが止まる位置を先頭に合わせる */
+    width: 242px;
+    height: 292px;
+    object-fit: cover;
+    margin-right: 50px;
+  }
+}
+
+.p-footer {
+}
+
+.p-footerNav {
+  border-top: 1px solid #a16803;
+  border-bottom: 1px solid #a16803;
+}
+
+.p-navList {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  padding: 30px 0;
+
+  &__item {
+    color: #a16803;
+    font-size: 18px;
+  }
+
+  &__item:hover {
+    color: #503c14;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}

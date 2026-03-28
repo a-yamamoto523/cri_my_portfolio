@@ -5,41 +5,26 @@
 例: .c-button, .c-button__icon, .c-card, .c-card__title
 */
 
-// 実用例
 .c-button {
-
   display: flex;
   justify-content: center; /* 横方向の中央寄せ */
   align-items: center;
-    
 
-    &__text {
+  &__text {
     display: inline-block; /* サイズを持てるようにする */
-    margin:  100px auto;
+    margin: 100px auto;
     width: 280px;
     height: 51px;
-    background:url(../img/workButton-01.png);
-    background-size:cover;
+    background: url(../img/workButton-01.png);
+    background-size: cover;
+  }
 
-
-}
-
-  &__text:hover{
+  &__text:hover {
     display: inline-block; /* サイズを持てるようにする */
-    margin:  100px auto;
+    margin: 100px auto;
     width: 280px;
     height: 51px;
-    background:url(../img/workButton-02.png);
-    background-size:cover;
+    background: url(../img/workButton-02.png);
+    background-size: cover;
+  }
 }
-
-
-}
-
-
-
-
-
-
-
-

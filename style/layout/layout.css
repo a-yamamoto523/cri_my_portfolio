@@ -4,11 +4,4 @@
 役割: ページの主要な骨格（ヘッダー、フッター、メインコンテンツエリア、サイドバーなど）はこのレイアウトを指定します。
 命名: クラス名頭に「l-」を付ける。 
 例: .l-header, .l-footer, .l-main, .l-sidebar
-*/
-.l-header {
-  /* ヘッダーのスタイル */
-}
-
-.l-main {
-  /* メインコンテンツエリアのスタイル */
-}/*# sourceMappingURL=layout.css.map */
+*//*# sourceMappingURL=layout.css.map */
